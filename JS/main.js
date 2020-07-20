@@ -37,8 +37,8 @@ console.log(map)
  */
 function init() {
     c.cls();
+    clearInterval(tickIntervall);
     tickIntervall = setInterval(draw, 1000 / FPS);
-
 }
 
 
