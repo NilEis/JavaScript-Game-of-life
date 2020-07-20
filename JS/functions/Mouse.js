@@ -33,7 +33,7 @@ var mouseDown = 0;
 document.body.onmousedown = function () {
     pMX = mouseX;
     pMY = mouseY;
-    map[Math.floor(pMX / TILESIZE)][Math.floor(pMY / TILESIZE)] = 1;
+    map[Math.floor(pMY / TILESIZE)][Math.floor(pMX / TILESIZE)] = 1;
     mouseDown = 1;
 }
 document.body.onmouseup = function () {
