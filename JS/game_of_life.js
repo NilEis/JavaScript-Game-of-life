@@ -1,7 +1,7 @@
-/*const calc = gpu.createKernel(function (a) {
+const calc = gpu.createKernel(function (a) {
     let neighbours = 0;
     for (let y = -1; y <= 1; y++) {
-        for (let x = -1; y <= 1; y++) {
+        for (let x = -1; x <= 1; x++) {
             neighbours = a[this.thread.y + y][this.thread.x + x] == 1 ? neighbours + 1 : neighbours;
         }
     }
@@ -12,6 +12,6 @@
         return 1;
     else if (neighbours > 3 || neighbours <= 2)
         return 0;
-}).setOutput([HEIGHT, WIDTH]);*/
+}).setOutput([HEIGHT, WIDTH]);
 
 init();
