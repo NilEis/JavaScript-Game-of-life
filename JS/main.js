@@ -4,9 +4,9 @@
  */
 
 
-const WIDTH = 50;
-const HEIGHT = 50;
-const TILESIZE = 10;
+const WIDTH = 100;
+const HEIGHT = 100;
+const TILESIZE = 5;
 
 /**
  * @constant {canvasClass} c Die canvasClass
@@ -25,11 +25,16 @@ document.getElementById("main").addEventListener("mousemove", function (event) {
 });
 
 /**
+ * @var {number} drawIntervall Die Variabel in der der Intervall gespeichert wird
+ */
+var drawIntervall;
+
+/**
  * @var {number} tickIntervall Die Variabel in der der Intervall gespeichert wird
  */
 var tickIntervall;
 
-var map = generateArray(WIDTH, HEIGHT, 0);
+var map;
 console.log(map)
 
 /**
@@ -37,8 +42,10 @@ console.log(map)
  */
 function init() {
     c.cls();
+    map = generateArray(WIDTH, HEIGHT, 0);
+    clearInterval(drawIntervall);
     clearInterval(tickIntervall);
-    tickIntervall = setInterval(draw, 1000 / FPS);
+    drawIntervall = setInterval(draw, 1000 / FPS);
 }
 
 
