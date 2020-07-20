@@ -15,6 +15,10 @@
 <body id=main>
     <div id="canvasID"></div><br />
     <button onclick="init()">Reset</button>
+    <button onclick="tick()">Tick</button>
+    <button onclick="tickIntervall = setInterval(tick,50)">Start</button>
+    <button onclick="clearInterval(tickIntervall)">Stop</button>
+    <button onclick="map = randomMap()">Random</button>
 </body>
 
 <!--Canvas-->
