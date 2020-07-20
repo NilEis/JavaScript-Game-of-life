@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of life</title>
+
+    <!--GPU.js-->
+    <script src="JS/GPU/gpu-browser.min.js"></script>
+
+    <script>const gpu = new GPU();</script>
+</head>
+
+<body id=main>
+    <div id="canvasID"></div><br />
+    <button onclick="init()">Reset</button>
+</body>
+
+<!--Canvas-->
+<script src="JS/draw/canvas.js"></script>
+
+<!--Zusätzliche Funktionen-->
+<script src="JS/functions/Array.js"></script>
+<script src="JS/functions/Key.js"></script>
+<script src="JS/functions/math.js"></script>
+<script src="JS/functions/Mouse.js"></script>
+<script src="JS/functions/random.js"></script>
+<script src="JS/functions/vector.js"></script>
+
+<!--Startscript-->
+<script src="JS/main.js"></script>
+
+<!--GOL-->
+<script src="JS/game_of_life.js"></script>
+
+</html>
