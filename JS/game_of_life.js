@@ -14,4 +14,8 @@ const calc = gpu.createKernel(function (a) {
         return 0;
 }).setOutput([HEIGHT, WIDTH]);
 
+const randomMap = gpu.createKernel(function () {
+    return Math.round(Math.random());
+}).setOutput([HEIGHT, WIDTH]);
+
 init();
