@@ -43,9 +43,9 @@ console.log(map)
 function init() {
     c.cls();
     map = generateArray(WIDTH, HEIGHT, 0);
-    clearInterval(drawIntervall);
-    clearInterval(tickIntervall);
-    drawIntervall = setInterval(draw, 1000 / FPS);
+    clearTimeout(drawIntervall);
+    clearTimeout(tickIntervall);
+    drawIntervall = setTimeout(draw, 1000 / FPS);
 }
 
 
@@ -54,11 +54,13 @@ function init() {
  */
 function tick() {
     map = calc(map);
+    tickIntervall = setTimeout(tick, 1000 / FPS);
 }
 
 function draw() {
     c.cls();
     c.fillArray2D(map, ["white", "black"], TILESIZE, TILESIZE);
     if (c.mouseOnCanvas(mouseX, mouseY))
-        c.drawRect(Math.floor(mouseX / TILESIZE) * TILESIZE, Math.floor(mouseY / TILESIZE) * TILESIZE,TILESIZE,TILESIZE,"grey");
+        c.drawRect(Math.floor(mouseX / TILESIZE) * TILESIZE, Math.floor(mouseY / TILESIZE) * TILESIZE, TILESIZE, TILESIZE, "grey");
+    drawIntervall = setTimeout(draw, 1000 / FPS);
 }
