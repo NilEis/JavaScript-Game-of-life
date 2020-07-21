@@ -4,9 +4,9 @@
  */
 
 
-const WIDTH = 100;
-const HEIGHT = 100;
-const TILESIZE = 5;
+const WIDTH = 50;
+const HEIGHT = 50;
+const TILESIZE = 10;
 
 /**
  * @constant {canvasClass} c Die canvasClass
@@ -56,7 +56,9 @@ function tick() {
     map = calc(map);
 }
 
-function draw(){
+function draw() {
     c.cls();
     c.fillArray2D(map, ["white", "black"], TILESIZE, TILESIZE);
+    if (c.mouseOnCanvas(mouseX, mouseY))
+        c.drawRect(Math.floor(mouseX / TILESIZE) * TILESIZE, Math.floor(mouseY / TILESIZE) * TILESIZE,TILESIZE,TILESIZE,"grey");
 }
