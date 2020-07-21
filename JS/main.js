@@ -4,9 +4,9 @@
  */
 
 
-const WIDTH = 50;
-const HEIGHT = 50;
-const TILESIZE = 10;
+const WIDTH = 200;
+const HEIGHT = 200;
+const TILESIZE = 3;
 
 /**
  * @constant {canvasClass} c Die canvasClass

@@ -18,4 +18,11 @@ const randomMap = gpu.createKernel(function () {
     return Math.round(Math.random());
 }).setOutput([HEIGHT, WIDTH]);
 
+function iterate(j) {
+    while (j) {
+        map = calc(map);
+        j--
+    }
+}
+
 init();

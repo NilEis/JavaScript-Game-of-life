@@ -18,7 +18,12 @@
     <button onclick="map = calc(map)">Tick</button>
     <button onclick="tickIntervall = setTimeout(tick,1000 / FPS)">Start</button>
     <button onclick="clearTimeout(tickIntervall)">Stop</button>
-    <button onclick="map = randomMap()">Random</button>
+    <button onclick="map = randomMap()">Random</button><br />
+    <button onclick="iterate(5)">Calculate 5</button>
+    <button onclick="iterate(10)">Calculate 10</button>
+    <button onclick="iterate(50)">Calculate 50</button>
+    <button onclick="iterate(100)">Calculate 100</button>
+    <button onclick="iterate(500)">Calculate 500</button>
 </body>
 
 <!--Canvas-->
