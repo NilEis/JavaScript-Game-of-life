@@ -134,6 +134,13 @@ class canvasClass {
         this.canvas.height = h;
     }
 
+    mouseOnCanvas(mx, my) {
+        if (mx < 0 || mx > this.width || my < 0 || my > this.height)
+            return false;
+        else
+            return true;
+    }
+
     /**
      * 
      * @param {{name:string,x:number,y:number,w:number,h:number, draw:function}|{name:string,x:number,y:number,r:number, draw:function}} shape Das was gezeichnet werden soll
