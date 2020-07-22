@@ -45,6 +45,8 @@ function init() {
     map = generateArray(WIDTH, HEIGHT, 0);
     for (let x = 5; x < map[0].length - 5; x++)
         map[Math.floor(map.length / 2)][x] = 1;
+    for (let y = 5; y < map.length - 5; y++)
+        map[y][Math.floor(map[0].length / 2)] = 1;
     clearTimeout(drawIntervall);
     clearTimeout(tickIntervall);
     drawIntervall = setTimeout(draw, 1000 / FPS);
