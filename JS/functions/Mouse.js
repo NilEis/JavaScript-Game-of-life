@@ -45,6 +45,6 @@ document.body.onmouseup = function () {
 }
 //Die Funktion wird ausgeführt wenn die Maus bewegt wird.
 function updateMouse(e) {
-    mouseX = e.pageX;
-    mouseY = e.pageY;
+    mouseX = e.pageX - c.canvas.offsetLeft;
+    mouseY = e.pageY - c.canvas.offsetTop;
 }
