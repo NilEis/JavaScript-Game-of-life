@@ -14,6 +14,13 @@ const calc = gpu.createKernel(function (a) {
         return 0;
 }).setOutput([HEIGHT, WIDTH]);
 
+const getImg = gpu.createKernel(function (a) {
+    if (a[this.thread.y][this.thread.x] == 0)
+        this.color(1, 1, 1, 1);
+    else
+        this.color(0, 0, 0, 1);
+}).setOutput([HEIGHT, WIDTH]).setGraphical(true);
+
 const randomMap = gpu.createKernel(function () {
     return Math.round(Math.random());
 }).setOutput([HEIGHT, WIDTH]);
